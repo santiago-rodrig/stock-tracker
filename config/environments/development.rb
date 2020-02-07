@@ -60,3 +60,8 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end
+
+IEX::Api.configure do |config|
+  config.publishable_token = Rails.application.credentials.iex_sandbox_key # defaults to ENV['IEX_API_PUBLISHABLE_TOKEN']
+  config.endpoint = 'https://sandbox.iexapis.com/v1' # defaults to 'https://cloud.iexapis.com/v1'
+end
