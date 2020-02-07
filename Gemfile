@@ -25,6 +25,8 @@ gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
 # Stock prices API gem iexcloud
 gem 'iex-ruby-client'
+# Font awesome in rails
+gem 'font-awesome-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
