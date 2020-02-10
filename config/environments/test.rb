@@ -46,3 +46,8 @@ Rails.application.configure do
   # Raises error for missing translations.
   # config.action_view.raise_on_missing_translations = true
 end
+
+# IEX::Api.configure do |config|
+#   config.publishable_token = Rails.credentials.iex_api_key # defaults to ENV['IEX_API_PUBLISHABLE_TOKEN']
+#   config.endpoint = 'https://sandbox.iexapis.com/v1' # defaults to 'https://cloud.iexapis.com/v1'
+# end

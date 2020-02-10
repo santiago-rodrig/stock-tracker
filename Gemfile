@@ -21,8 +21,11 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 # Use devise for authentication
 gem 'devise'
-# User devise-bootstrap-views
+# Use devise-bootstrap-views
 gem 'devise-bootstrap-views', '~> 1.0'
+# Use iex-ruby-client to get financial data
+gem 'iex-ruby-client'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
