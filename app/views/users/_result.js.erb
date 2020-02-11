@@ -1,0 +1,4 @@
+let results = document.getElementById('results')
+results.innerHTML = "<%= j render('users/result.html') %>"
+// j is for escaping javascript
+// actually j is an alias of escape_javascript, yes, a method
