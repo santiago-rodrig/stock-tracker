@@ -16,7 +16,17 @@
               <th scope="row"><%= s.ticker %></th>
               <td><%= s.name %></td>
               <td><%= s.price %></td>
-              <td></td>
+              <td>
+                <%=
+                  link_to(
+                    'Remove',
+                    user_stock_path(s),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' },
+                    class: 'btn btn-sm btn-warning'
+                  )
+                  %>
+              </td>
             </tr>
           <% end %>
         </tbody>
