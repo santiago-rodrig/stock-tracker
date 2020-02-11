@@ -22,3 +22,10 @@
     </div>
   <% end %>
 </div>
+<% if @stock %>
+  <div class="card card-header results-box">
+    <strong>Symbol: </strong> <%= @stock.ticker %>
+    <strong>Name: </strong> <%= @stock.name %>
+    <strong>Price: </strong> <%= @stock.price %>
+  </div>
+<% end %>
