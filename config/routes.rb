@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :user_stocks
+  resources :user_stocks, only: :create
   devise_for :users
   root 'static_pages#index'
   get 'my_portfolio', to: 'users#my_portfolio'
