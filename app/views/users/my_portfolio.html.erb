@@ -1,2 +1,13 @@
-<h1>Users#my_portfolio</h1>
-<p>Find me in app/views/users/my_portfolio.html.erb</p>
+<h1>My portfolio</h1>
+<div class="search-area">
+  <h3>Search stocks</h3>
+  <%= form_tag('#', method: :get) do %>
+    <div class="form-group">
+      <div class="col-sm-9">
+        <%= text_field_tag :stock, params[:stock] %>
+      </div>
+      <div class="col-sm-3">
+      </div>
+    </div>
+  <% end %>
+</div>
