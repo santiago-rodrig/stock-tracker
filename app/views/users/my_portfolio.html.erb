@@ -2,11 +2,22 @@
 <div class="search-area">
   <h3>Search stocks</h3>
   <%= form_tag('#', method: :get) do %>
-    <div class="form-group">
-      <div class="col-sm-9">
-        <%= text_field_tag :stock, params[:stock] %>
+    <div class="form-group row">
+      <div class="col-sm-9 no-padding-right">
+        <%=
+          text_field_tag(
+            :stock,
+            params[:stock],
+            paceholder: 'Stock ticker symbol',
+            autofocus: true,
+            class: 'form-control form-control-lg'
+          )
+        %>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-3 no-padding-left">
+        <%= button_tag(type: :submit, class: 'btn btn-success') do %>
+          <%= fa_icon('search 2x') %>
+        <% end %>
       </div>
     </div>
   <% end %>

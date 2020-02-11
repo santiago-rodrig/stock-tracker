@@ -25,7 +25,8 @@ gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
 # Use iex-ruby-client to get financial data
 gem 'iex-ruby-client'
-
+# Use font-awesome icons
+gem 'font-awesome-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
