@@ -1,15 +1,15 @@
-<h1>My portfolio</h1>
+<h1>My friends</h1>
 
 <div class="search-area">
-  <h3>Search stocks</h3>
-  <%= form_tag(search_stock_path, remote: true, method: :get) do %>
+  <h3>Search Friends</h3>
+  <%= form_tag(search_friend_path, remote: true, method: :get) do %>
     <div class="form-group row">
       <div class="col-sm-9 no-padding-right">
         <%=
           text_field_tag(
-            :stock,
-            params[:stock],
-            placeholder: 'Stock ticker symbol',
+            :friend,
+            params[:friend],
+            placeholder: 'Name of the user',
             autofocus: true,
             class: 'form-control form-control-lg'
           )
@@ -24,4 +24,4 @@
   <% end %>
 </div>
 <div id="results"></div>
-<%= render 'stocks/stock_list' %>
+<%= render 'friendships/friends_list' %>

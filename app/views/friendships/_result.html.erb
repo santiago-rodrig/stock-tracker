@@ -1,0 +1,22 @@
+<div class="results-box">
+  <%= render 'layouts/messages' %>
+</div>
+
+<% if @matched_friends.any? %>
+  <% @matched_friends.each do |friend| %>
+    <div class="card card-header results-box">
+      <strong>Email: </strong> <%= friend.email %>
+      <strong>First Name: </strong> <%= friend.first_name %>
+      <strong>Last Name: </strong> <%= friend.last_name %>
+
+      <%=
+        link_to(
+          'Add to friends',
+          friendships_path(friend: friend),
+          method: :post,
+          class: 'btn btn-xs btn-success'
+        )
+      %>
+    </div>
+  <% end %>
+<% end %>
