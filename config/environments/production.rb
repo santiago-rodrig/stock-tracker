@@ -110,3 +110,8 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 end
+
+IEX::Api.configure do |config|
+  config.publishable_token = Rails.application.credentials.iex_api_key # defaults to ENV['IEX_API_PUBLISHABLE_TOKEN']
+  config.endpoint = 'https://sandbox.iexapis.com/v1' # defaults to 'https://cloud.iexapis.com/v1'
+end
