@@ -1,0 +1,26 @@
+
+
+<div class="row mt-5 mb-5">
+  <div class="col-md-6">
+    <h1 align="center"><%= @user.full_name %> Profile</h1>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">User info</h3>
+        <dl>
+          <dt>Email</dt>
+          <dd><%= @user.email %></dd>
+          <dt>First name</dt>
+          <dd><%= @user.first_name %></dd>
+          <dt>Last name</dt>
+          <dd><%= @user.last_name %></dd>
+          <dt>Relation</dt>
+          <dd><%= relation_with(current_user, @user) %></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Tracked Stocks</h2>
+<%= render 'stock_info_list' %>

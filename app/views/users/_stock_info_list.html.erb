@@ -1,0 +1,24 @@
+<% if @stocks.any? %>
+  <div class="row">
+    <div class="col-9">
+      <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Ticker</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @stocks.each do |s| %>
+            <tr>
+              <th scope="row"><%= s.ticker %></th>
+              <td><%= s.name %></td>
+              <td><%= s.price %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<% end %>

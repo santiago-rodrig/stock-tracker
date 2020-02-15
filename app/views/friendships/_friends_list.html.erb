@@ -19,13 +19,20 @@
               <td>
                 <%=
                   link_to(
+                    'View profile',
+                    user_path(friend),
+                    class: 'btn btn-sm btn-primary'
+                  )
+                %>
+                <%=
+                  link_to(
                     'Remove',
                     friendship_path(friend),
                     method: :delete,
                     data: { confirm: 'Are you sure?' },
                     class: 'btn btn-sm btn-warning'
                   )
-                  %>
+                %>
               </td>
             </tr>
           <% end %>

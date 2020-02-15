@@ -9,9 +9,10 @@
       <strong>First Name: </strong> <%= friend.first_name %>
       <strong>Last Name: </strong> <%= friend.last_name %>
 
+      <%= link_to 'View profile', user_path(friend), class: 'btn btn-sm btn-primary' %>
       <% if current_user.friends.include?(friend) %>
         <span class="badge badge-secondary">
-          You already added this user to your friends
+          friend
         </span>
       <% else %>
         <%=
